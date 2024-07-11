@@ -140,6 +140,10 @@ export class ChatMessage {
   @Field(() => Number)
   likesCount: number;
 
+  // Adds messageTags 
+  @Field(() => [String])
+  messageTags: String[];
+
   @Field(() => RichMessageContent, { nullable: true })
   richContent?: RichMessageContent;
 

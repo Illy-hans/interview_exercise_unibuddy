@@ -15,6 +15,8 @@ export class ChatMessageDataLoader
     super(messageLogic, {
       text: 'Error displaying message',
       sender: { id: '' },
+      // adds messageTags
+      messageTags: [], 
       likes: [],
       likesCount: 0,
       created: new Date(),

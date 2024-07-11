@@ -86,6 +86,16 @@ We'd love to hear about
 * How you would go about testing
 * What you might do differently
 
+### My solution 
+
+I have updated the ChatMessageModel to include messageTags. I chose not to create a seperate schema for tags in this instance for the scope of this task. Longer term I would want to explore folding messageTags and conversation tags into one model and keeping that data streamlined for efficiency in API calls - this works particularly well if the tags can be chosen from a dropdown. I suggest updating the conversation tags name in the codebase would be useful for clarity. 
+
+In terms of implementation the message tags would have to be able to be updated both when the message is sent and at any other time. That would then also need a seperate function to be able to update the value(s) independently. 
+
+For all the tests to pass the ChatMessageModel needs to be updated to include messageTags with a value. I would also add specific tests to cover the addition and updating of tags for a message. 
+*A question here is whether tags are automatically deleted when the message is. Is a record kept and just hidden from the front-end? 
+
+
 # Additional
 The following docs are from the live service repo. You may find them helpful. 
 
